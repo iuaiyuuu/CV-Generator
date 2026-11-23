@@ -58,6 +58,15 @@ Mau lihat hasilnya dulu? Buka [`examples/sample-user/`](examples/sample-user/): 
 
 Kalau sudah punya CV lama, AI bisa mengubahnya jadi entri dan menandai bagian yang bertentangan dengan datamu: lihat [`workflows/import-existing-cv.md`](workflows/import-existing-cv.md).
 
+## Contoh hasil
+
+CV asli yang dibuat dengan repo ini untuk lowongan Data Engineer, diekspor dengan `tools/md2pdf.py`. Nama dan kontak ditutup; selebihnya persis seperti hasil alatnya. (Contoh fiktif lengkap, dengan deskripsi lowongan dan laporan kecocokan, ada di [`examples/sample-user/`](examples/sample-user/).)
+
+<p>
+  <img src="docs/images/example-cv-page-1.png" alt="Contoh CV halaman 1: ringkasan, pendidikan, pengalaman, dan organisasi" width="49%">
+  <img src="docs/images/example-cv-page-2.png" alt="Contoh CV halaman 2: proyek, skill, dan sertifikasi" width="49%">
+</p>
+
 ## Yang dijaga oleh aturan
 
 | Aturan | Jaminan |

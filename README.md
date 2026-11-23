@@ -53,6 +53,15 @@ who you are             your proof              what the employer wants
 
 Want to see the result first? Open [`examples/sample-user/`](examples/sample-user/): fictional data, one job, the generated CV, its PDF, and the match report.
 
+## Example output
+
+A real CV produced with this repo for a Data Engineer posting, exported with `tools/md2pdf.py`. The name and contact details are covered; everything else is exactly what the tool produced. (A fully fictional example, with the job description and the match report, is in [`examples/sample-user/`](examples/sample-user/).)
+
+<p>
+  <img src="docs/images/example-cv-page-1.png" alt="Example CV, page 1: summary, education, experience, and organizations" width="49%">
+  <img src="docs/images/example-cv-page-2.png" alt="Example CV, page 2: projects, skills, and certifications" width="49%">
+</p>
+
 ## What the rules enforce
 
 | Rule | Guarantee |
