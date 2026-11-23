@@ -29,7 +29,7 @@ siapa kamu              bukti kamu              yang diminta perusahaan
 1. **Clone** repo ini.
 2. **Isi datamu** (pribadi, tidak ikut git). **Cara paling mudah: ceritakan saja kepada AI-mu.** Ceritakan proyek, kisah, dan skill-mu dengan kata-katamu sendiri, dalam bahasa apa pun dan urutan apa pun. AI mengajukan beberapa pertanyaan lanjutan yang singkat, lalu menuliskan entrinya untukmu memakai template (`workflows/interview.md`). Misalnya:
 
-   > Saya mau bercerita tentang proyek, kisah, dan skill saya. Tolong wawancarai saya dan tulis entrinya ke repo ini.
+   > Wawancarai saya.
 
    Tidak ada yang disimpan sebelum kamu mengonfirmasi, dan apa pun yang tidak kamu sebut ditandai `[TODO]`, tidak pernah ditebak. Lebih suka menulis file sendiri? Salin template-nya:
    - `profile/`: salin tiap `*.template.md` menjadi file asli (`personal.md`, `education.md`, `experience.md`).
@@ -49,8 +49,10 @@ siapa kamu              bukti kamu              yang diminta perusahaan
      AI mengubahnya menjadi **alasan dan arah** di ringkasan CV-mu, tidak pernah menjadi kata kosong seperti "pekerja keras". Lihat contoh lengkap (fiktif) di [`examples/sample-user/profile/story.md`](examples/sample-user/profile/story.md).
    - Kamu boleh menulis `story.md` dalam bahasa Indonesia. AI akan menerjemahkan isinya ke bahasa CV.
 3. **Tambah lowongan**: tempel deskripsi lowongan **lengkap** **ke chat dengan AI-mu** (AI menyimpannya ke `jobs/<perusahaan>_<posisi>.md` untukmu) **atau langsung ke file itu sendiri** (pakai `jobs/job.template.md`). Link atau judul lowongan saja tidak cukup: AI hanya bisa menyesuaikan CV dengan teks yang bisa ia baca. Untuk program atau beasiswa, sertakan juga baris batas waktu dan syarat kelayakan.
-4. **Minta agen AI-mu**, misalnya:
-   > Buatkan CV untuk `jobs/acme_data-analyst.md` memakai `workflows/generate-cv.md`.
+4. **Minta agen AI-mu**, dengan kata-kata biasa:
+   > Buatkan CV-nya.
+
+   Itu sudah cukup. Agen mencari lowongannya sendiri (di pesanmu, atau file terbaru di `jobs/`), memilih workflow yang tepat dari `AGENTS.md`, dan bertanya hanya kalau ada yang tidak jelas. Kamu tidak perlu menyebut nama file atau workflow. Permintaan singkat lain bekerja dengan cara yang sama: *"Lowongan ini cocok nggak?"*, *"Jadikan PDF."*, *"Tambahkan sertifikat ini."*
 5. Periksa `output/…/cv.md` dan `match-report.md`. Jawab pertanyaan `[TODO]` yang muncul.
 6. Ekspor ke PDF: `pip install reportlab`, lalu `python tools/md2pdf.py output/<folder>/cv.md` (lihat [`tools/README.md`](tools/README.md)).
 

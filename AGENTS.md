@@ -32,6 +32,28 @@ If a fact is not there, it does not exist. Do not guess, infer, or "round up". S
 4. `profile/` then `info/` — the user's data.
 5. `templates/cv.template.md` — the output layout.
 
+## Short commands: the user never has to name files or workflows
+
+Users type short, plain requests in any language. **You** choose the workflow and find the inputs. Never ask the user for a file name or a workflow name.
+
+| The user says (examples) | Do this |
+|---|---|
+| "make my CV", "buat CV-nya", "CV for this job", or pastes a job description or link | `workflows/generate-cv.md` (see "Finding the job" below) |
+| "interview me", "wawancarai saya", "let me tell you about myself" | `workflows/interview.md` |
+| "is this job a good fit?", "cocok nggak?", "check this job" | `workflows/analyze-job.md` |
+| "add this certificate / project / paper", or shares a file | `workflows/add-entry.md` |
+| "import my old CV", or shares an existing CV | `workflows/import-existing-cv.md` |
+| "make a PDF", "jadikan PDF" | `python tools/md2pdf.py` on the latest `cv.md` (see `tools/README.md`) |
+
+### Finding the job for "make my CV"
+
+1. A job description or link in the **same message or earlier in the chat**: use it, and save it to `jobs/<company>_<role>.md` (`workflows/generate-cv.md` step 2).
+2. Otherwise the **newest file in `jobs/`** (ignore `*.template.md` and `README.md`). Say which one you chose in one short line, so the user can correct you.
+3. If `jobs/` has several recent files and it is unclear which one, ask **one** short question: "Which job: A, B, or C?"
+4. If there is no job anywhere, ask the user to paste the **full** job description. Do not write a generic CV unless they explicitly ask for one.
+
+"The CV" or "the latest" means the newest folder in `output/`. If the user's data is missing or thin, offer `workflows/interview.md` instead of asking many questions.
+
 ## Rules index
 
 1. [`rules/01-truthfulness.md`](rules/01-truthfulness.md) — never fabricate; flag gaps.

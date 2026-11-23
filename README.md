@@ -27,7 +27,7 @@ who you are             your proof              what the employer wants
 1. **Clone** this repo.
 2. **Fill your data** (private, git-ignored). **The easiest way: just tell your AI.** Describe your projects, your story, and your skills in your own words, in any language and any order. The AI asks a few short follow-up questions and writes the entries for you using the templates (`workflows/interview.md`). For example:
 
-   > I want to tell you about my projects, my story, and my skills. Interview me and write the entries into this repo.
+   > Interview me.
 
    Nothing is saved until you confirm, and anything you did not say is marked `[TODO]`, never guessed. Prefer to write the files yourself? Copy the templates:
    - `profile/` — copy each `*.template.md` to a real file (`personal.md`, `education.md`, `experience.md`).
@@ -46,8 +46,10 @@ who you are             your proof              what the employer wants
 
      The AI turns this into the **reason and direction** of your summary, never into bare words like "hardworking". See the full fictional example in [`examples/sample-user/profile/story.md`](examples/sample-user/profile/story.md).
 3. **Add a job**: paste the **full** job description **either into the chat with your AI** (it saves it to `jobs/<company>_<role>.md` for you) **or into that file yourself** (use `jobs/job.template.md`). A link or job title alone is not enough: the AI can only tailor to text it can read. For a program or fellowship, include the deadline and eligibility lines too.
-4. **Ask your AI agent**, for example:
-   > Generate a CV for `jobs/acme_data-analyst.md` using `workflows/generate-cv.md`.
+4. **Ask your AI agent**, in plain words:
+   > Make my CV.
+
+   That is enough. The agent finds the job (in your message, or the newest file in `jobs/`), picks the right workflow from `AGENTS.md`, and asks only if something is unclear. You never need to name files or workflows. Other short requests work the same way: *"Is this job a good fit?"*, *"Make a PDF."*, *"Add this certificate."*
 5. Review `output/…/cv.md` and `match-report.md`. Answer any `[TODO]` questions.
 6. Export to PDF: `pip install reportlab`, then `python tools/md2pdf.py output/<run>/cv.md` (see [`tools/README.md`](tools/README.md)).
 
