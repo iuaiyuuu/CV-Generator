@@ -1,0 +1,6 @@
+# Normalize line endings so contributors on Windows, macOS, and Linux get clean diffs.
+* text=auto
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary

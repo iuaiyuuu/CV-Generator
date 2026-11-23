@@ -1,0 +1,35 @@
+# ============================================================
+# PRIVACY: personal data must NEVER be committed to this public repo.
+# Only rules, templates, READMEs and examples are tracked.
+# ============================================================
+
+# Personal profile (name, contact, education, experience)
+profile/*
+!profile/README.md
+!profile/*.template.md
+
+# Personal evidence library (certificates, skills, projects, research)
+info/**
+!info/**/
+!info/README.md
+!info/**/README.md
+!info/**/*.template.md
+
+# Job descriptions you collect
+jobs/*
+!jobs/README.md
+!jobs/*.template.md
+
+# Generated CVs and reports
+output/*
+!output/README.md
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
